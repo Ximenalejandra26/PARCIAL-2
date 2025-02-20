@@ -24,4 +24,29 @@ const libros = [
   const librosOrdenados = bubbleSort(libros, 'año');
   console.timeEnd('Bubble Sort por Año');
   console.log(librosOrdenados);
+
+  const libros1 = [
+    { titulo: "Algoritmos Avanzados", año: 2018, reservas: 120 },
+    { titulo: "Introducción a JavaScript", año: 2020, reservas: 90 },
+    { titulo: "Estructuras de Datos", año: 2015, reservas: 60 },
+    { titulo: "Sistemas Operativos", año: 2019, reservas: 110 }
+  ];
   
+  const insertionSort = (array, reservas) => {
+    for (let i = 1; i < array.length; i++) {
+      let current = array[i];
+      let j = i - 1;
+      while (j >= 0 && array[j][reservas] > current[reservas]) {
+        array[j + 1] = array[j];
+        j--;
+      }
+      array[j + 1] = current;
+    }
+    return array;
+  };
+  
+  console.time('Insertion Sort por Reservas');
+  const librosOrdenadosreservas = insertionSort(libros1, 'reservas');
+  console.timeEnd('Insertion Sort por Reservas');
+  console.log(librosOrdenadosreservas);
+ 
