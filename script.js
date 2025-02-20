@@ -50,3 +50,32 @@ const libros = [
   console.timeEnd('Insertion Sort por Reservas');
   console.log(librosOrdenadosreservas);
  
+  const libros3 = [
+    { titulo: "Algoritmos Avanzados", año: 2018, reservas: 120 },
+    { titulo: "Introducción a JavaScript", año: 2020, reservas: 90 },
+    { titulo: "Estructuras de Datos", año: 2015, reservas: 60 },
+    { titulo: "Sistemas Operativos", año: 2019, reservas: 110 }
+  ];
+  
+  function selectionSort(array, titulo) {
+    let n = array.length;
+    for (let i = 0; i < n - 1; i++) {
+      let minIndex = i;
+      for (let j = i + 1; j < n; j++) {
+        if (array[j][titulo].localeCompare(array[minIndex][titulo]) < 0) {
+          minIndex = j;
+        }
+      }
+      if (minIndex !== i) {
+        [array[i], array[minIndex]] = [array[minIndex], array[i]];
+      }
+    }
+    return array;
+  }
+  
+  console.time('Selection Sort por Título');
+  const librosOrdenadosPorTitulo = selectionSort(libros3, 'titulo');
+  console.timeEnd('Selection Sort por Título');
+  console.log(librosOrdenadosPorTitulo);
+    
+  
