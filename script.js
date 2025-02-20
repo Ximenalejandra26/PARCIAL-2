@@ -78,4 +78,4 @@ const libros = [
   console.timeEnd('Selection Sort por Título');
   console.log(librosOrdenadosPorTitulo);
     
-  //El algoritmo mas facil y practico para realizar este codigo es bubbleSort
+  //El algoritmo mas facil y practico para realizar este codigo es Insertion Sort
