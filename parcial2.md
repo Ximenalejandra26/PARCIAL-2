@@ -74,8 +74,8 @@ const insertionSort = (array, reservas) => {
   return array;
 };
 ```
-**Ciclo Externo:** Itera sobre el arreglo empezando desde el segundo elemento.
-**Ciclo Interno:** Compara el elemento actual con los elementos anteriores y lo inserta en la posición correcta.
+**En el ciclo Externo:** Itera sobre el arreglo empezando desde el segundo elemento.
+**En el ciclo Interno:** Compara el elemento actual con los elementos anteriores y lo inserta en la posición correcta.
 
 **- ejecucion**
 ```js
@@ -92,7 +92,7 @@ console.timeEnd('Insertion Sort por Reservas');
 console.log(librosOrdenadosreservas);
 ```
 
-## 4. Selection Sort
+## 3. Selection Sort
 Lo que buscmaos con este algoritmo es ordenar el arreglo de libros por el `titulo` de forma alfabética. Busca el elemento más pequeño en cada iteración y lo coloca en la posición correcta.
 
 - **Código**
